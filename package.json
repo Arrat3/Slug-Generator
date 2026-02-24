@@ -1,0 +1,26 @@
+{
+  "name": "slug_generator",
+  "version": "1.0.0",
+  "description": "A tiny TypeScript library for generating URL-friendly slugs from text.",
+  "main": "index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"No tests yet\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Arrat3/Slug-Generator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Arrat3/Slug-Generator/issues"
+  },
+  "homepage": "https://github.com/Arrat3/Slug-Generator#readme",
+  "devDependencies": {
+    "typescript": "^5.9.3"
+  }
+}
