@@ -19,11 +19,9 @@ export const slugify = (input: string): string => {
     if (isAllowedChar) answer += char;
   }
 
-  answer = answer.replace(/ /g, "-");
-  answer = answer.replace(/_/g, "-");
-  answer = collapseHyphens(answer);
-  answer = trimHyphens(answer);
-  answer = answer.toLocaleLowerCase();
+  answer = trimHyphens(
+    collapseHyphens(answer.replace(/ /g, "-").replace(/_/g, "-")),
+  ).toLocaleLowerCase();
 
   return answer;
 };
