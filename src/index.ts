@@ -2,10 +2,6 @@ const isCharacter = (val: string): boolean => /^\p{L}$/u.test(val);
 
 const isNumber = (val: string): boolean => !isNaN(Number(val));
 
-const collapseHyphens = (s: string): string => s.replace(/-+/g, "-");
-
-const trimHyphens = (s: string): string => s.replace(/^-+|-+$/g, "");
-
 export const slugify = (input: string): string => {
   let answer: string = "";
 
@@ -19,9 +15,13 @@ export const slugify = (input: string): string => {
     if (isAllowedChar) answer += char;
   }
 
-  answer = trimHyphens(
-    collapseHyphens(answer.replace(/ /g, "-").replace(/_/g, "-")),
-  ).toLocaleLowerCase();
+  answer = answer
+    .replace(/ /g, "-")
+    .replace(/_/g, "-")
+    .replace(/-+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .toLocaleLowerCase();
+
 
   return answer;
 };
