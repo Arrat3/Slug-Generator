@@ -4,7 +4,7 @@
   "description": "A tiny TypeScript library for generating URL-friendly slugs from text.",
   "main": "dist/index.js",
   "files": [
-    "./dist"
+    "dist"
   ],
   "types": "dist/index.d.ts",
   "scripts": {
