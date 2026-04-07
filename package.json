@@ -1,15 +1,16 @@
 {
-  "name": "slug_generator",
+  "name": "slug-generator",
   "version": "1.0.0",
   "description": "A tiny TypeScript library for generating URL-friendly slugs from text.",
-  "main": "index.js",
+  "main": "dist/index.js",
   "files": [
     "./dist"
   ],
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "test": "vitest"
+    "test": "vitest",
+    "prepare": "npm run build"
   },
   "repository": {
     "type": "git",
