@@ -5,8 +5,8 @@ const isNumber = (val: string): boolean => !isNaN(Number(val));
 export const slugify = (input: string): string => {
   let answer: string = "";
 
-  for (let char of input) {
-    let isAllowedChar: boolean =
+  for (const char of input) {
+    const isAllowedChar: boolean =
       char === " " ||
       char === "-" ||
       char === "_" ||
@@ -21,7 +21,6 @@ export const slugify = (input: string): string => {
     .replace(/-+/g, "-")
     .replace(/^-+|-+$/g, "")
     .toLocaleLowerCase();
-
 
   return answer;
 };
